@@ -1,0 +1,132 @@
+# LATIHAN CLASS DIAGRAM DAN PROGRAM
+# CLASS KOORDINAT
+from re import X
+from tkinter import Y
+
+
+class Titik:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+titik_a = Titik(0,0)
+titik_b = Titik(3,4)
+print('Titik A memiliki koordinat({},{})'.format(titik_a.x,titik_a.y))
+print('Titik B memiliki koordinat({},{})'.format(titik_b.x,titik_b.y))
+
+# CLASS MENU
+class menuminuman:
+    def __init__(self,nama,deskripsi,harga):
+        self.nama = nama
+        self.deskripsi = deskripsi
+        self.harga = harga
+
+mnm1 = menuminuman('Jus Jambu','Jus Jambu Merah Tanpa Gula',8500)
+mnm2 = menuminuman('Jus Alpukat','Jus Alpukat dengan gula merah',15000)
+mnm3 = menuminuman("Jus Alpukat Xtra Milk",'Jus Alpukat dengan susu coklat',15000)
+mnm4 = menuminuman('Red and Smooth','Smoothie dengan pisang dan susu',17500)
+
+pilihan = [mnm1,mnm2,mnm3,mnm4]
+print('Daftar menu minuman Healthy')
+for mn in pilihan:
+    t = '{} harga Rp {},{}'.format(mn.nama,mn.harga,mn.deskripsi)
+    print(t)
+
+# CLASS BUKU
+class Buku:
+    def __init__(self,judul,pengarang,tahun_terbit):
+        self.judul = judul
+        self.pengarang = pengarang
+        self.tahun_terbit =  tahun_terbit
+
+buku = Buku('Tenggelamnya Kapal Van Der Wijck','Hamka',1938)
+t = 'Buku {} karangan {} pertama kali terbit {}'.format(buku.judul,buku.pengarang,buku.tahun_terbit)
+print(t)
+
+# CLASS GARIS
+class Titik:
+    def __init__(self,x,y):
+        self.x = x
+        self.y = y
+
+class Garis:
+    def __init__(self,titik_pertama,titik_kedua):
+        self.titik_pertama = titik_pertama
+        self.titik_kedua = titik_kedua
+
+    def panjang(self):
+        pjg_x = self.titik_kedua.x - self.titik_pertama.x
+        pjg_y = self.titik_kedua.y - self.titik_pertama.y
+        pjg = (pjg_x**2 +  pjg_y**2) ** 0.5
+        return pjg
+
+titik_a = Titik(0,0)
+titik_b = Titik(3,4)
+garis_ab = Garis(titik_a,titik_b)
+print('panjang gairs ab adalah {}'.format(garis_ab.panjang()))
+
+# CLASS MAHASISWA
+class Mahasiswa:
+    def __init__(self,nama,nim,prodi,thn_masuk):
+        self.nama = nama
+        self.nim = nim
+        self.prodi = prodi
+        self.thn_masuk = thn_masuk
+
+m1 = Mahasiswa('Udin','390329039','Sistem Informasi',2020)
+teks = ('{} adalah mahasiswa {} dengan nim {} angkatan {}'.format(m1.nama,m1.prodi,m1.nim,m1.thn_masuk))
+print(teks)
+
+
+
+# TUGAS CLASS DIAGRAM DAN PROGRAM
+#CLASS BUKU
+class Buku:
+    def __init__(self,judul,pengarang,tahun_terbit):
+        self.judul = judul
+        self.pengarang = pengarang
+        self.tahun_terbit =  tahun_terbit
+
+buku = Buku('Tenggelamnya Kapal Van Der Wijck','Hamka',1938)
+buku2 = Buku('Habbie dan Ainun','Bacharuddin Jusuf Habibie',2010)
+buku3 = Buku('Habis Gelap Terbitlah Terang','R.A Kartini',1922)
+t = 'Buku {} karangan {} pertama kali terbit {} '.format(buku.judul,buku.pengarang,buku.tahun_terbit)
+t1 = 'Saya suka membaca buku {} karya {} yang terbit pada {}'.format(buku2.judul,buku2.pengarang,buku2.tahun_terbit)
+print(t)
+print(t1)
+
+#CLASS MAHASISWA
+class Mahasiswa:
+    def __init__(self,nama,nim,prodi,thn_masuk):
+        self.nama = nama
+        self.nim = nim
+        self.prodi = prodi
+        self.thn_masuk = thn_masuk
+
+m1 = Mahasiswa('Udin','390329039','Sistem Informasi',2020)
+m2 = Mahasiswa('Venus','5210411213','Informatika',2021)
+m3 = Mahasiswa('Alfa','52104112000','Informatika Medis',2015)
+teks = ('{} adalah mahasiswa {} dengan nim {} angkatan {}'.format(m1.nama,m1.prodi,m1.nim,m1.thn_masuk))
+teks2 = ('{} merupakan Mahasiswa jurusan {} dengan nim {} dengan angkatan {}'.format(m2.nama,m3.prodi,m1.nim,m3.thn_masuk))
+print(teks)
+print(teks2)
+
+# CLASS MENU
+class menuminuman:
+    def __init__(self,nama,deskripsi,harga):
+        self.nama = nama
+        self.deskripsi = deskripsi
+        self.harga = harga
+
+mnm1 = menuminuman('Jus Jambu','Jus Jambu Merah Tanpa Gula',8500)
+mnm2 = menuminuman('Jus Alpukat','Jus Alpukat dengan gula merah',15000)
+mnm3 = menuminuman("Jus Alpukat Xtra Milk",'Jus Alpukat dengan susu coklat',15000)
+mnm4 = menuminuman('Red and Smooth','Smoothie dengan pisang dan susu',17500)
+mnm5 = menuminuman('Jus Melon','Jus Melon tanpa biji',10000)
+mnm6 = menuminuman('Jus Jeruk','Dari jeruk asli yang dipanen oleh petani lokal',50000)
+
+pilihan = [mnm1,mnm2,mnm3,mnm4,mnm5,mnm6]
+print('Daftar menu minuman Healthy')
+for mn in pilihan:
+    t = '{} harga Rp {},{}'.format(mn.nama,mn.harga,mn.deskripsi)
+    print(t)
