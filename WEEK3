@@ -1,8 +1,5 @@
 # LATIHAN CLASS DIAGRAM DAN PROGRAM
 
-# DIAGRAM CLASS LATIHAN
-![Latihan1](https://user-images.githubusercontent.com/99310663/156083813-a2d37777-b177-448d-8ebd-8cef1a5f1321.jpg)
-
 # CLASS KOORDINAT
 from re import X
 from tkinter import Y
